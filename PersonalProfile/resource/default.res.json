@@ -1,0 +1,44 @@
+{
+	"groups": [
+		{
+			"keys": "bg_jpg,egret_icon_png,description_json,bg_scroll22_jpg",
+			"name": "preload"
+		},
+		{
+			"keys": "bg_scroll_jpg,bg_scroll2_jpg",
+			"name": "scroll"
+		}
+	],
+	"resources": [
+		{
+			"url": "assets/bg.jpg",
+			"type": "image",
+			"name": "bg_jpg"
+		},
+		{
+			"url": "assets/egret_icon.png",
+			"type": "image",
+			"name": "egret_icon_png"
+		},
+		{
+			"url": "config/description.json",
+			"type": "json",
+			"name": "description_json"
+		},
+		{
+			"url": "assets/bg_scroll.jpg",
+			"type": "image",
+			"name": "bg_scroll_jpg"
+		},
+		{
+			"url": "assets/bg_scroll2.jpg",
+			"type": "image",
+			"name": "bg_scroll2_jpg"
+		},
+		{
+			"name": "bg_scroll22_jpg",
+			"type": "image",
+			"url": "assets/bg_scroll2.jpg"
+		}
+	]
+}
