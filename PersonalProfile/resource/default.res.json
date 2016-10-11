@@ -1,7 +1,7 @@
 {
 	"groups": [
 		{
-			"keys": "bg_jpg,egret_icon_png,description_json,bg_scroll22_jpg",
+			"keys": "bg_jpg,egret_icon_png,description_json,bg_scroll22_jpg,bubble1_png,bubble2_png,bubble3_png,title_png,未标题-1_png",
 			"name": "preload"
 		},
 		{
@@ -39,6 +39,31 @@
 			"name": "bg_scroll22_jpg",
 			"type": "image",
 			"url": "assets/bg_scroll2.jpg"
+		},
+		{
+			"name": "bubble1_png",
+			"type": "image",
+			"url": "assets/bubble1.png"
+		},
+		{
+			"name": "bubble2_png",
+			"type": "image",
+			"url": "assets/bubble2.png"
+		},
+		{
+			"name": "bubble3_png",
+			"type": "image",
+			"url": "assets/bubble3.png"
+		},
+		{
+			"name": "title_png",
+			"type": "image",
+			"url": "assets/title.png"
+		},
+		{
+			"name": "未标题-1_png",
+			"type": "image",
+			"url": "assets/未标题-1.png"
 		}
 	]
 }
