@@ -42,19 +42,6 @@ var Scroll = (function (_super) {
         rect.width = 640;
         rect.height = 200;
         rect.y = 100;
-        var endText = new egret.TextField();
-        endText.text = "喵喵喵喵喵喵";
-        endText.size = 32;
-        endText.y = 500;
-        this.addChild(endText);
-        var mask = new egret.Shape();
-        mask.graphics.lineStyle(0x000000);
-        mask.graphics.beginFill(0xffffff);
-        mask.graphics.drawRect(0, 0, 640, 100);
-        mask.graphics.endFill();
-        mask.y = 900;
-        this.addChild(mask);
-        mask.mask = endText;
         var text = new egret.gui.TextBase();
         text.text = "滑动观看下一页\n\n          ﹀";
         text.size = 32;
@@ -91,6 +78,19 @@ var Scroll = (function (_super) {
         text_intro.width = 640;
         text_intro.alpha = 0;
         text_intro.visible = false;
+        var text_end = new egret.gui.TextBase();
+        text_end.text = "喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵\n喵喵喵喵喵喵喵喵喵喵喵喵";
+        text_end.size = 26;
+        text_end.textColor = 0x000000;
+        text_end.textAlign = egret.HorizontalAlign.CENTER;
+        text_end.anchorOffsetX = text_intro.width / 2;
+        text_end.anchorOffsetY = text_intro.height / 2;
+        text_end.fontFamily = "微软雅黑";
+        text_end.x = 320;
+        text_end.y = 1200;
+        text_end.height = 100;
+        text_end.width = 640;
+        text_end.alpha = 0;
         var change = function () {
             //alert("hello!");
             var tw = egret.Tween.get(text);
@@ -113,6 +113,7 @@ var Scroll = (function (_super) {
         group2.addElement(bubble1);
         group2.addElement(bubble2);
         group2.addElement(bubble3);
+        group2.addElement(text_end);
         group2.y = 1136;
         stage.addChild(group2);
         var currentPage = 1;
@@ -145,16 +146,20 @@ var Scroll = (function (_super) {
                         tw.to({ "size": 26 }, 250, egret.Ease.sineInOut);
                         tw = egret.Tween.get(bubble1);
                         tw.wait(1700);
-                        tw.to({ "alpha": 1 }, 300, egret.Ease.backOut);
+                        tw.to({ "alpha": 1 }, 300, egret.Ease.sineInOut);
                         tw.to({ "x": 0 }, 300, egret.Ease.backOut);
                         tw = egret.Tween.get(bubble2);
                         tw.wait(2200);
-                        tw.to({ "alpha": 1 }, 300, egret.Ease.backOut);
+                        tw.to({ "alpha": 1 }, 300, egret.Ease.sineInOut);
                         tw.to({ "x": 0 }, 300, egret.Ease.backOut);
                         tw = egret.Tween.get(bubble3);
                         tw.wait(2700);
-                        tw.to({ "alpha": 1 }, 300, egret.Ease.backOut);
+                        tw.to({ "alpha": 1 }, 300, egret.Ease.sineInOut);
                         tw.to({ "x": 0 }, 300, egret.Ease.backOut);
+                        tw = egret.Tween.get(text_end);
+                        tw.wait(3200);
+                        tw.to({ "alpha": 1 }, 300, egret.Ease.sineOut);
+                        tw.to({ "y": 1000 }, 300, egret.Ease.backOut);
                     }
                     else {
                         text_title.visible = false;
@@ -187,6 +192,7 @@ var Scroll = (function (_super) {
                 egret.Tween.get(bubble2).to({ "x": -640 }, 300, egret.Ease.backIn);
                 egret.Tween.get(bubble3).to({ "alpha": 0 }, 300, egret.Ease.backIn);
                 egret.Tween.get(bubble3).to({ "x": -640 }, 300, egret.Ease.backIn);
+                egret.Tween.get(text_end).to({ "y": 1200 }, 300, egret.Ease.backIn);
             }
         }, this);
     };
