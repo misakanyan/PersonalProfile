@@ -68,6 +68,7 @@ class Scroll extends egret.DisplayObjectContainer {
         text_back.width = 640;
         text_back.alpha = 0;
 
+
         var text_title:egret.gui.TextBase = new egret.gui.TextBase();
         text_title.text = "简要介绍";
         text_title.size = 52;
